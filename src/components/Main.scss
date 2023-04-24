@@ -1,0 +1,53 @@
+.main {
+  margin-top: 45px;
+
+  .container {
+    width: 960px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .cardsArr {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+  }
+
+  .topflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 32px;
+      line-height: 39px;
+    }
+
+    input {
+      width: 250px;
+      height: 45px;
+      border: 1px solid #F3F3F3;
+      border-radius: 10px;
+      padding-left: 46px;
+    }
+
+    div {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: 15px;
+        background-image: url("../assets/find.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+}

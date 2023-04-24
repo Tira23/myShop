@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 210px;
+  height: 260px;
+  border: 1px solid #F3F3F3;
+  border-radius: 40px;
+  transition: 0.5s;
+  padding: 30px 30px 34px;
+}
+.card .mainImg {
+  position: relative;
+}
+.card .mainImg .imageHeart {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 25px;
+  height: 25px;
+}
+.card .imageProduct {
+  width: 133px;
+  height: 112px;
+}
+.card:hover {
+  border: 1px solid #F8F8F8;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+}
+.card h6 {
+  width: 150px;
+  height: 34px;
+  font-weight: 400;
+  line-height: 17px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.card .cardBotFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.card .price div:nth-child(1) {
+  width: 35px;
+  height: 13px;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+.card .price div:nth-child(2) {
+  width: 80px;
+  height: 17px;
+}
+
+/*# sourceMappingURL=Card.module.css.map */

@@ -1,0 +1,23 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #bbf9ef;
+}
+
+.shop {
+  position: relative;
+  background-color: #FFF;
+  box-shadow: 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 1080px;
+}
+
+.container {
+  width: 960px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=App.module.css.map */

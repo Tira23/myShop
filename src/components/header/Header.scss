@@ -1,0 +1,93 @@
+.header {
+  height: 147px;
+  border-bottom: 1px solid #EAEAEA;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+
+  .leftflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .label {
+      background-image: url(../../../public/favicon.jpg);
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+    }
+
+    .flexlabeltext {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+
+      div:nth-child(1) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      div:nth-child(2) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9D9D9D;
+      }
+    }
+  }
+
+
+  .rightflex {
+    display: flex;
+    gap: 30px;
+
+    .price {
+      position: relative;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #5C5C5C;
+
+      &::before {
+        content: '';
+        left: -28px;
+        top: -2px;
+        position: absolute;
+        background-image: url("../../assets/cart.svg");
+        //padding: 10px;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .favorite {
+      background-image: url('../../assets/favorite.svg');
+      width: 20px;
+      height: 20px;
+      //margin-left: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .personal {
+      background-image: url("../../assets/personal.svg");
+      width: 20px;
+      height: 20px;
+      //margin-left: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+  }
+}
