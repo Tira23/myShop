@@ -4,7 +4,7 @@ body {
 
 .bgScreen {
   position: absolute;
-  z-index: 5;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   width: 100%;
@@ -44,19 +44,28 @@ body {
   margin: 20px auto;
 }
 .cartFlex .bot .priceBlock {
-  margin: 20px 30px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+.cartFlex .bot .priceBlock div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .cartFlex .bot .priceBlock p {
   display: inline;
+  margin-top: 20px;
+  height: 19px;
+  font-size: 16px;
+  line-height: 19px;
 }
 .cartFlex .bot .priceBlock p:nth-child(1) {
-  color: red;
+  font-weight: 400;
 }
 .cartFlex .bot .priceBlock p:nth-child(2) {
-  color: green;
+  font-weight: 600;
 }
 .cartFlex .bot button {
   width: 325px;

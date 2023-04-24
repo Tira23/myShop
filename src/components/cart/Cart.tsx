@@ -1,9 +1,13 @@
 import React from 'react';
 import css from './Cart.module.css'
 
-export function Cart() {
+interface IProp{
+    fun(): void
+}
+export function Cart({fun}:IProp) {
     return (
-        <div className={css.bgScreen}>
+        <div className={css.cont}>
+            <div onClick={fun} className={css.bgScreen}></div>
             <div className={css.cartFlex}>
                 <div>
                     <h4 className={css.header}>
@@ -19,7 +23,7 @@ export function Cart() {
                             <p>Итого</p><p>123123 $</p>
                         </div>
                         <div>
-                            <p>Налог</p><p>123123 $</p>
+                            <p>Налог 5%</p><p>123123 $</p>
                         </div>
                     </div>
                     <button>Оформить заказ</button>

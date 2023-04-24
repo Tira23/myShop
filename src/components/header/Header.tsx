@@ -4,7 +4,11 @@ import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {RootProducts} from "../../redux";
 
-export function Header() {
+interface IProp{
+    fun(): void
+}
+
+export function Header({fun}:IProp) {
     const {currentProduct} = useSelector((state: RootProducts) => state.products)
     const [allPrice, setAllPrice] = useState(0)
 
@@ -25,7 +29,7 @@ export function Header() {
                 </div>
             </Link>
             <div className={css.rightflex}>
-                <div className={css.price}>{allPrice} $</div>
+                <div onClick={fun} className={css.price}>{allPrice} $</div>
                 <Link to={`/favorite`}>
                     <div className={css.favorite}></div>
                 </Link>

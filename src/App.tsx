@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import css from './App.module.css'
 import {Header} from "./components/header/Header";
 import {Outlet} from "react-router-dom";
@@ -21,6 +21,11 @@ export interface IProduct {
 
 function App() {
     const dispatch = useDispatch<AppDispatch>()
+    const [viewCart, setViewCart] = useState(false)
+
+    const toggleViewCart = useCallback(() => {
+        setViewCart(prev => !prev)
+    }, [])
 
     useEffect(() => {
         // https://fakestoreapi.com/products
@@ -31,8 +36,8 @@ function App() {
         <div>
 
             <div className={css.shop}>
-                <Cart/>
-                <Header/>
+                {viewCart && <Cart fun={toggleViewCart}/>}
+                <Header fun={toggleViewCart}/>
 
                 <Outlet/>
             </div>

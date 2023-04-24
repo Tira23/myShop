@@ -2,9 +2,10 @@ body {
   overflow: hidden;
 }
 
+
 .bgScreen {
   position: absolute;
-  z-index: 5;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   width: 100%;
@@ -47,18 +48,33 @@ body {
     margin: 20px auto;
 
     .priceBlock {
-      margin: 20px 30px;
+      margin: 20px auto;
       display: flex;
       flex-direction: column;
       width: 100%;
-      p{
+
+      & div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+
+
+      p {
         display: inline;
+        margin-top: 20px;
+        height: 19px;
+        font-size: 16px;
+        line-height: 19px;
       }
+
       & p:nth-child(1) {
-        color: red
+        font-weight: 400;
       }
+
       & p:nth-child(2) {
-        color: green;
+        font-weight: 600;
       }
     }
 
