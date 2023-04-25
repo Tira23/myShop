@@ -1,14 +1,14 @@
 import css from "../Main.module.css";
 import {Card} from "../card/Card";
 import React from "react";
-import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {RootProducts} from "../../redux";
+import {Link} from "react-router-dom";
 
 
-export function Favorite() {
+export function Personal() {
 
-    const {currentProduct} = useSelector((state: RootProducts) => state.products)
+    const {buyProducts} = useSelector((state: RootProducts) => state.products)
 
     return <section className={css.main}>
         <div className={css.container}>
@@ -17,12 +17,13 @@ export function Favorite() {
                     <Link to={`/`}>
                         <button>&lsaquo;</button>
                     </Link>
-                    Ваши закладки
+                    Ваши покупки
                 </h2>
             </div>
             <div className={css.cardsArr}>
-                {currentProduct?.map(item => item.favorite && (<Card key={item.id} cardProp={item}/>))}
+                {buyProducts?.map(item => (<Card key={item.id} cardProp={item}/>))}
             </div>
         </div>
     </section>;
+
 }

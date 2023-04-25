@@ -12,6 +12,7 @@ import {
 import Error from "./error";
 import {Provider} from "react-redux";
 import {store} from "./redux";
+import {Personal} from "./components/personal/Personal";
 
 
 const router = createBrowserRouter([
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
                 element: <Favorite/>,
             },
             {
-                path: "/favorite",
-                element: <Favorite/>,
+                path: "/personal",
+                element: <Personal/>,
             },
         ]
     },

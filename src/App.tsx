@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useEffect} from 'react';
 import css from './App.module.css'
 import {Header} from "./components/header/Header";
 import {Outlet} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getAllProducts} from "./redux/Products";
-import {AppDispatch} from "./redux";
+import {AppDispatch, RootProducts} from "./redux";
 import {Cart} from "./components/cart/Cart";
 
 
@@ -21,11 +21,8 @@ export interface IProduct {
 
 function App() {
     const dispatch = useDispatch<AppDispatch>()
-    const [viewCart, setViewCart] = useState(false)
+    const {viewCart} = useSelector((state:RootProducts)=>state.products)
 
-    const toggleViewCart = useCallback(() => {
-        setViewCart(prev => !prev)
-    }, [])
 
     useEffect(() => {
         // https://fakestoreapi.com/products
@@ -36,10 +33,10 @@ function App() {
         <div>
 
             <div className={css.shop}>
-                {viewCart && <Cart fun={toggleViewCart}/>}
-                <Header fun={toggleViewCart}/>
+                <Header/>
 
                 <Outlet/>
+                {viewCart && <Cart/>}
             </div>
         </div>
     );

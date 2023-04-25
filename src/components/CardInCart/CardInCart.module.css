@@ -1,0 +1,63 @@
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+}
+.container button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container button:hover {
+  transform: scale(1.1);
+  background-color: #fba4a4;
+}
+
+.productImage {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.productImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.titlePrice {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.titlePrice p {
+  display: inline;
+  font-size: 14px;
+  line-height: 17px;
+}
+.titlePrice p:nth-child(1) {
+  overflow: hidden;
+  font-weight: 400;
+  width: 150px;
+  height: 20px;
+}
+.titlePrice p:nth-child(2) {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=CardInCart.module.css.map */

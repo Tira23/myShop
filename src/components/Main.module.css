@@ -5,6 +5,7 @@
   width: 960px;
   background-color: #fff;
   margin: 0 auto;
+  min-height: 100vh;
 }
 .main .cardsArr {
   margin-top: 24px;
@@ -20,6 +21,20 @@
 .main .topflex h2 {
   font-size: 32px;
   line-height: 39px;
+  position: relative;
+  margin-left: 50px;
+}
+.main .topflex h2 button {
+  font-size: 20px;
+  position: absolute;
+  width: 35px;
+  top: 2px;
+  left: -45px;
+  height: 35px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
+  cursor: pointer;
 }
 .main .topflex input {
   width: 250px;

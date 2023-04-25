@@ -6,6 +6,7 @@ const obj = {
     }
 }
 
-obj.qwer = false;
+// obj.qwer = false;
+delete obj.dev
 
 console.log(obj)

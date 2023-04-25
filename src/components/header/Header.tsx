@@ -1,21 +1,20 @@
 import css from "./Header.module.css";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {RootProducts} from "../../redux";
+import {toggleViewCart} from "../../redux/Products";
 
-interface IProp{
-    fun(): void
-}
 
-export function Header({fun}:IProp) {
-    const {currentProduct} = useSelector((state: RootProducts) => state.products)
+export function Header() {
+    const {product} = useSelector((state: RootProducts) => state.products)
     const [allPrice, setAllPrice] = useState(0)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        const priceSum = currentProduct.filter(item => item.selected).reduce((a, b) => a + b.price, 0)
+        const priceSum = product.filter(item => item.selected).reduce((a, b) => a + b.price, 0)
         setAllPrice(+priceSum.toFixed(2))
-    }, [currentProduct])
+    }, [product])
 
     return <header className={css.header}>
         <div className={css.container}>
@@ -29,11 +28,11 @@ export function Header({fun}:IProp) {
                 </div>
             </Link>
             <div className={css.rightflex}>
-                <div onClick={fun} className={css.price}>{allPrice} $</div>
+                <div onClick={()=>dispatch(toggleViewCart())} className={css.price}>{allPrice} $</div>
                 <Link to={`/favorite`}>
                     <div className={css.favorite}></div>
                 </Link>
-                <Link to={"/favorite"}>
+                <Link to={"/personal"}>
                     <div className={css.personal}></div>
                 </Link>
             </div>
